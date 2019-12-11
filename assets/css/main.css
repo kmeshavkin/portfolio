@@ -1439,14 +1439,14 @@ article:last-child {
 
 /* Image */
 .image {
-  -webkit-transition: opacity 0.25s ease-in-out;
-  transition: opacity 0.25s ease-in-out;
+  -webkit-transition: border 0.25s ease-in-out;
+  transition: border 0.25s ease-in-out;
   display: inline-block;
-  border: solid 6px #ebebeb !important;
+  border: solid 6px #ebebeba1 !important;
 }
 
 .image:hover {
-  opacity: 0.9;
+  border: solid 6px #ebebeb !important;
 }
 
 .image img {
@@ -1521,22 +1521,15 @@ ul.divided li:first-child {
 }
 
 /* Icons */
-ul.icons {
-  list-style: none;
-  padding-left: 0;
+div.icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
-ul.icons > li {
-  position: relative;
-  padding: 2em 0 0 3em;
-  margin: 0;
-}
-
-ul.icons > li:before {
-  position: absolute;
-  left: 0;
-  top: 2.6em;
-  display: block;
+div.icons > div:before {
   font-size: 0.8em;
   background: #878787;
   color: #e4e4e4;
@@ -1547,13 +1540,14 @@ ul.icons > li:before {
   text-align: center;
   -webkit-box-shadow: 0.125em 0.175em 0 0 rgba(0, 0, 0, 0.125);
           box-shadow: 0.125em 0.175em 0 0 rgba(0, 0, 0, 0.125);
+  margin-right: 0.5em;
 }
 
-ul.icons > li:first-child {
+div.icons > div:first-child {
   padding-top: 0;
 }
 
-ul.icons > li:first-child:before {
+div.icons > div:first-child:before {
   top: 0;
 }
 
@@ -1701,15 +1695,7 @@ button,
   font-size: 0.85em;
   letter-spacing: 2px;
   padding: 0.6em 1.5em;
-  margin-bottom: 0.5em;
-}
-
-input[type="button"].grey,
-input[type="submit"].grey,
-input[type="reset"].grey,
-button.grey,
-.button.grey {
-  background: #878787;
+  margin-bottom: 1em;
 }
 
 input[type="button"].icon:before,
@@ -1744,7 +1730,7 @@ input[type="submit"].alt,
 input[type="reset"].alt,
 button.alt,
 .button.alt {
-  background: #878787;
+  background: #8cc9f0;
 }
 
 input[type="button"].alt:hover,
@@ -1752,7 +1738,7 @@ input[type="submit"].alt:hover,
 input[type="reset"].alt:hover,
 button.alt:hover,
 .button.alt:hover {
-  background: #979797;
+  background: #92d4fd;
 }
 
 input[type="button"].alt:active,
@@ -1760,15 +1746,19 @@ input[type="submit"].alt:active,
 input[type="reset"].alt:active,
 button.alt:active,
 .button.alt:active {
-  background: #878787;
+  background: #84c6f0;
 }
 
 /* Box */
-.no-sidebar .box.post > header {
-  text-align: center;
+div.boxWrapper {
+  margin-bottom: 1.5em;
 }
 
-.box.excerpt .date {
+div.boxWrapper > p {
+  margin: 0.5em 0 0.25em 0;
+}
+
+span.box {
   background: #878787;
   color: #fff;
   font-weight: 400;
@@ -1779,9 +1769,9 @@ button.alt:active,
           box-shadow: 0.125em 0.175em 0 0 rgba(0, 0, 0, 0.125);
   display: inline-block;
   font-size: 0.85em;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   padding: 0.25em 1em 0.25em 1em;
-  margin: 0 0 2.5em 0;
+  margin-bottom: 0.25em;
 }
 
 /* Icons */
@@ -1966,7 +1956,7 @@ button.alt:active,
   overflow: hidden;
   border-top: solid 2px #e5e5e5;
   background: #f0f0f0;
-  padding: 6em 0 8em 0;
+  padding-top: 3em;
 }
 
 #footer form input[type="text"],
@@ -2055,7 +2045,7 @@ button.alt:active,
   }
   /* Footer */
   #footer {
-    padding: 4em 0;
+    padding-top: 2.5em;
   }
   /* Copyright */
   #copyright {
@@ -2128,10 +2118,6 @@ button.alt:active,
   div.actions .button + .button {
     margin-left: 0em;
   }
-  /* Box */
-  .box.excerpt header {
-    text-align: center;
-  }
   /* Header */
   #header > .container {
     padding: 3.5em 0 2.5em 0;
@@ -2174,14 +2160,24 @@ button.alt:active,
   }
   /* Footer */
   #footer {
-    padding: 2em 0;
+    padding-top: 2em;
   }
-  #footer ul.icons {
+  #footer div.icons {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     margin-bottom: 0;
+  }
+  #footer div.icons > div + div {
+    margin-top: 0.5em;
   }
   /* Copyright */
   #copyright .links {
-    margin-bottom: 0;
+    margin-bottom: 1em;
   }
   #copyright .links li {
     display: block;

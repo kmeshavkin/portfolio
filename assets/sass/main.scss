@@ -42,9 +42,6 @@ html,
 body,
 div,
 span,
-applet,
-object,
-iframe,
 h1,
 h2,
 h3,
@@ -52,73 +49,11 @@ h4,
 h5,
 h6,
 p,
-blockquote,
-pre,
 a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
 img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
 ol,
 ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
+li {
   margin: 0;
   padding: 0;
   border: 0;
@@ -127,66 +62,8 @@ video {
   vertical-align: baseline;
 }
 
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-  display: block;
-}
-
-body {
-  line-height: 1;
-}
-
-ol,
-ul {
-  list-style: none;
-}
-
-blockquote,
-q {
-  quotes: none;
-
-  &:before,
-  &:after {
-    content: "";
-    content: none;
-  }
-}
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
 body {
   -webkit-text-size-adjust: none;
-}
-
-mark {
-  background-color: transparent;
-  color: inherit;
-}
-
-input::-moz-focus-inner {
-  border: 0;
-  padding: 0;
-}
-
-input,
-select,
-textarea {
-  -moz-appearance: none;
-  -webkit-appearance: none;
-  -ms-appearance: none;
-  appearance: none;
 }
 
 /* Basic */
@@ -195,12 +72,6 @@ textarea {
 // Based on css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice
 html {
   box-sizing: border-box;
-}
-
-*,
-*:before,
-*:after {
-  box-sizing: inherit;
 }
 
 body {
@@ -217,10 +88,7 @@ body {
   }
 }
 
-body,
-input,
-textarea,
-select {
+body {
   font-family: "Source Sans Pro";
   font-weight: 300;
   color: #777;
@@ -230,10 +98,7 @@ select {
 
 h1,
 h2,
-h3,
-h4,
-h5,
-h6 {
+h3 {
   font-weight: 600;
   text-transform: uppercase;
   color: #888;
@@ -301,44 +166,13 @@ i {
   font-style: italic;
 }
 
-sub {
-  position: relative;
-  top: 0.5em;
-  font-size: 0.8em;
-}
-
-sup {
-  position: relative;
-  top: -0.5em;
-  font-size: 0.8em;
-}
-
-hr {
-  border: 0;
-  border-top: solid 1px #ddd;
-}
-
-blockquote {
-  border-left: solid 0.5em #ddd;
-  padding: 1em 0 1em 2em;
-  font-style: italic;
-}
-
 p {
   text-align: justify;
   margin-bottom: 2em;
 }
 
-ul,
-ol,
-dl,
-table,
-blockquote {
+ul {
   margin-bottom: 2em;
-}
-
-br.clear {
-  clear: both;
 }
 
 /* Container */
@@ -387,20 +221,6 @@ br.clear {
   }
 }
 
-/* Sections/Article */
-
-section,
-article {
-  margin-bottom: 3em;
-}
-
-section > :last-child,
-article > :last-child,
-section:last-child,
-article:last-child {
-  margin-bottom: 0;
-}
-
 /* Image */
 
 .image {
@@ -424,7 +244,6 @@ article:last-child {
 
   &.featured {
     display: block;
-    width: 100%;
     margin: 0 0 2em 0;
   }
 
@@ -451,39 +270,6 @@ article:last-child {
 ul.links {
   list-style: none;
   padding-left: 0;
-
-  li {
-    display: inline;
-    border-left: solid 1px #d0d0d0;
-    padding-left: 1em;
-    margin: 0 0 0 1em;
-
-    &:first-child {
-      margin-left: 0;
-      padding-left: 0;
-      border-left: 0;
-    }
-  }
-}
-
-/* Divided */
-
-ul.divided {
-  list-style: none;
-  padding-left: 0;
-
-  li {
-    border-top: solid 2px #e5e5e5;
-    padding-left: 0;
-    margin: 2.5em 0 0 0;
-    padding: 2.5em 0 0 0;
-
-    &:first-child {
-      border-top: 0;
-      margin-top: 0;
-      padding-top: 0;
-    }
-  }
 }
 
 /* Icons */
@@ -513,106 +299,6 @@ div.icons {
         top: 0;
       }
     }
-  }
-}
-
-/* Form */
-
-form {
-  label {
-    font-weight: 600;
-    text-transform: uppercase;
-    color: #888;
-    display: block;
-    margin: 0 0 1em 0;
-  }
-
-  input[type="text"],
-  input[type="email"],
-  input[type="password"],
-  select,
-  textarea {
-    @include vendor("transition", "background-color 0.25s ease-in-out");
-    -webkit-appearance: none;
-    display: block;
-    border: 0;
-    background: #e8e8e8;
-    width: 100%;
-    box-shadow: inset 2px 2px 0px 0px rgba(0, 0, 0, 0.1);
-    border-radius: 4px;
-    line-height: 1.25em;
-    padding: 0.75em 1em 0.75em 1em;
-
-    &:focus {
-      background: #f0f0f0;
-    }
-  }
-
-  textarea {
-    min-height: 11em;
-  }
-
-  ::-webkit-input-placeholder {
-    color: #555 !important;
-    line-height: 1.35em;
-  }
-
-  :-moz-placeholder {
-    color: #555 !important;
-  }
-
-  ::-moz-placeholder {
-    color: #555 !important;
-  }
-
-  :-ms-input-placeholder {
-    color: #555 !important;
-  }
-
-  ::-moz-focus-inner {
-    border: 0;
-  }
-}
-
-/* Table */
-
-table {
-  width: 100%;
-
-  tbody {
-    tr {
-      border-top: solid 1px #e5e5e5;
-
-      &:first-child {
-        border-top: 0;
-      }
-    }
-  }
-
-  td {
-    padding: 0.75em 1em 0.75em 1em;
-  }
-
-  th {
-    text-align: left;
-    font-weight: bold;
-    padding: 0.75em 1em 0.75em 1em;
-  }
-
-  thead {
-    background: #878787;
-    color: #fff;
-    font-weight: 400;
-    text-transform: uppercase;
-    border: 0;
-    box-shadow: 0.125em 0.175em 0 0 rgba(0, 0, 0, 0.125);
-    font-size: 0.85em;
-    letter-spacing: 2px;
-  }
-
-  tfoot {
-    background: #f0f0f0;
-    border-top: solid 2px #e5e5e5;
   }
 }
 
@@ -793,63 +479,6 @@ span.box {
   }
 }
 
-/* Banner */
-
-#banner {
-  position: relative;
-  overflow: hidden;
-  background: #fff;
-  color: #fff;
-  text-align: center;
-  border-top: solid 2px #e5e5e5;
-  border-bottom: solid 2px #e5e5e5;
-  box-shadow: inset 0px -8px 0px 0px #fff, inset 0px 8px 0px 0px #fff;
-  position: relative;
-  text-transform: uppercase;
-  background: url("../../images/banner.jpg");
-  background-size: cover;
-  padding: 10em 0;
-
-  p {
-    font-weight: 400;
-    font-size: 2em;
-    line-height: 1.5em;
-    letter-spacing: 4px;
-    text-align: center;
-    margin: 0;
-  }
-
-  strong {
-    color: inherit;
-  }
-
-  > .container {
-    position: relative;
-
-    &:before,
-    &:after {
-      content: "";
-      display: block;
-      position: absolute;
-      top: 50%;
-      width: 35px;
-      height: 141px;
-      margin-top: -70px;
-      background: url("images/bracket.svg");
-      opacity: 0.15;
-    }
-
-    &:before {
-      left: 0;
-    }
-
-    &:after {
-      @include vendor("transform", "scaleX(-1)");
-      right: 0;
-    }
-  }
-}
-
 /* Main */
 
 #main {
@@ -862,8 +491,7 @@ span.box {
 /* Content */
 
 #content {
-  > section,
-  > article {
+  > section {
     border-top: solid 2px #e5e5e5;
     box-shadow: inset 0px 8px 0px 0px #fff, inset 0px 10px 0px 0px #e5e5e5;
     margin: 5em 0 0 0;
@@ -881,25 +509,9 @@ span.box {
 /* Footer */
 
 #footer {
-  position: relative;
-  overflow: hidden;
   border-top: solid 2px #e5e5e5;
   background: #f0f0f0;
-  padding-top: 3em;
-
-  form {
-    input[type="text"],
-    input[type="email"],
-    input[type="password"],
-    select,
-    textarea {
-      background: #f7f7f7;
-
-      &:focus {
-        background: #fff;
-      }
-    }
-  }
+  padding-top: 2em;
 
   h2 {
     text-align: center;
@@ -911,8 +523,8 @@ span.box {
 #copyright {
   border-top: solid 2px #e5e5e5;
   text-align: center;
-  margin-top: 6em;
-  padding-top: 4em;
+  margin-top: 3em;
+  padding-top: 2em;
 }
 
 /* XLarge */
@@ -974,20 +586,6 @@ span.box {
     padding: 2em 0;
   }
 
-  /* Banner */
-
-  #banner {
-    padding: 8em 0;
-
-    > .container {
-      padding: 0 4em;
-
-      br {
-        display: none;
-      }
-    }
-  }
-
   /* Main */
 
   #main {
@@ -997,14 +595,14 @@ span.box {
   /* Footer */
 
   #footer {
-    padding-top: 2.5em;
+    padding-top: 1.5em;
   }
 
   /* Copyright */
 
   #copyright {
     margin-top: 2em;
-    padding-top: 2em;
+    padding-top: 1.5em;
   }
 }
 
@@ -1108,25 +706,6 @@ span.box {
       }
     }
 
-    /* Banner */
-
-    #banner {
-      padding: 5em 0;
-
-      > .container {
-        padding: 0;
-
-        &:before,
-        &:after {
-          display: none;
-        }
-      }
-
-      p {
-        font-size: 1.25em;
-      }
-    }
-
     /* Features */
 
     #features {
@@ -1142,8 +721,7 @@ span.box {
     /* Content */
 
     #content {
-      > section,
-      > article {
+      > section {
         margin: 3em 0 0 0;
         padding: 3em 0 0 0;
       }
@@ -1152,7 +730,7 @@ span.box {
     /* Footer */
 
     #footer {
-      padding-top: 2em;
+      padding-top: 1em;
 
       div.icons {
         flex-flow: column;

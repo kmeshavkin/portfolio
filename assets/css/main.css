@@ -42,15 +42,6 @@ body {
   background: #f0f0f0;
 }
 
-body.is-preload *,
-body.is-preload *:before,
-body.is-preload *:after {
-  -webkit-animation: none !important;
-  animation: none !important;
-  -webkit-transition: none !important;
-  transition: none !important;
-}
-
 body {
   font-family: "Source Sans Pro";
   font-weight: 300;

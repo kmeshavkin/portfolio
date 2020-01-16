@@ -1,365 +1,341 @@
 <!-- USE https://autoprefixer.github.io/ TO PREFIX CSS -->
-<!-- In cmd: html-pdf resume/resume.html resume/resume.pdf -->
+<!-- In command line: html-pdf resume.html resume.pdf -->
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Portfolio | Konstantin Meshavkin | front-end developer</title>
-    <link
-      href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,800,900|Arvo:700"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css"
-    />
-    <style>
-      /* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.23, autoprefixer: v9.7.3) */
 
-      html {
-        background-color: lightgray;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Portfolio | Konstantin Meshavkin | front-end developer</title>
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,800,900|Arvo:700"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
+  <style>
+    /* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.23, autoprefixer: v9.7.3) */
 
-      body {
-        /* A4 size */
-        width: 21cm;
-        height: 28.9cm;
-        margin: 0px;
+    html {
+      background-color: lightgray;
+    }
 
-        font-family: "Source Sans Pro";
-        background-color: white;
-      }
+    body {
+      /* A4 size */
+      width: 21cm;
+      height: 28.9cm;
+      margin: 0px;
 
-      h1,
-      h2,
-      h3,
-      ul,
-      p {
-        margin: 0;
-      }
+      font-family: "Source Sans Pro";
+      background-color: white;
+    }
 
-      a {
-        color: black;
-      }
+    h1,
+    h2,
+    h3,
+    ul,
+    p {
+      margin: 0;
+    }
 
-      a:hover {
-        color: grey;
-      }
+    a {
+      color: black;
+    }
 
-      header,
-      .skillsProjects {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-      }
+    a:hover {
+      color: grey;
+    }
 
-      ul {
-        padding-left: 24px;
-      }
+    header,
+    .skillsProjects {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+    }
 
-      .date {
-        letter-spacing: 0.5px;
-      }
+    ul {
+      padding-left: 24px;
+    }
 
-      /* * {
+    .date {
+      letter-spacing: 0.5px;
+    }
+
+    /* * {
         border: 1px solid black;
       } */
 
-      /* HEADER */
+    /* HEADER */
 
-      header {
-        background-color: gainsboro;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-      }
+    header {
+      background-color: gainsboro;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+    }
 
-      header h1 {
-        padding: 0 24px;
-      }
+    header h1 {
+      padding: 0 24px;
+    }
 
-      .contactsWrapper {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-flex: 1;
-        -ms-flex: 1;
-        flex: 1;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-        flex-direction: column;
-        -webkit-box-align: end;
-        -ms-flex-align: end;
-        align-items: flex-end;
-        padding: 12px 24px;
-      }
+    .contactsWrapper {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-flex: 1;
+      -ms-flex: 1;
+      flex: 1;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-align: end;
+      -ms-flex-align: end;
+      align-items: flex-end;
+      padding: 12px 24px;
+    }
 
-      .contactsWrapper > div {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-      }
+    .contactsWrapper>div {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+    }
 
-      .contactsWrapper > div + div {
-        padding-top: 6px;
-      }
+    .contactsWrapper>div+div {
+      padding-top: 6px;
+    }
 
-      .contactsWrapper > div > .fa,
-      .contactsWrapper > div > .fab {
-        padding-right: 6px;
-      }
+    .contactsWrapper>div>.fa,
+    .contactsWrapper>div>.fab {
+      padding-right: 6px;
+    }
 
-      /* BODY */
+    /* BODY */
 
-      main {
-        padding: 0 24px;
-      }
+    main {
+      padding: 0 24px;
+    }
 
-      main h1 {
-        padding-top: 16px;
-      }
+    main h1 {
+      padding-top: 16px;
+    }
 
-      .list {
-        margin-left: 8px;
-        padding-left: 16px;
-        border-left: 3px grey solid;
-      }
+    .list {
+      margin-left: 8px;
+      padding-left: 16px;
+      border-left: 3px grey solid;
+    }
 
-      /* EXPERIENCE */
+    /* EXPERIENCE */
 
-      .position {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-align: end;
-        -ms-flex-align: end;
-        align-items: flex-end;
-        /* justify-content: space-between; */
-      }
+    .position {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: end;
+      -ms-flex-align: end;
+      align-items: flex-end;
+      /* justify-content: space-between; */
+    }
 
-      .position div {
-        padding-left: 24px;
-      }
+    .position div {
+      padding-left: 24px;
+    }
 
-      .workProjects {
-        padding-left: 24px;
-      }
+    .workProjects {
+      padding-left: 24px;
+    }
 
-      .workProjects > div + div {
-        padding-top: 12px;
-      }
+    .workProjects>div+div {
+      padding-top: 12px;
+    }
 
-      /* PROJECTS AND SKILLS */
+    /* PROJECTS AND SKILLS */
 
-      .projects {
-        width: 64%;
-        padding-right: 24px;
-      }
+    .projects {
+      width: 64%;
+      padding-right: 24px;
+    }
 
-      .project + .project {
-        padding-top: 15px;
-      }
+    .project+.project {
+      padding-top: 15px;
+    }
 
-      .list > div + div {
-        padding-top: 4px;
-      }
-    </style>
-  </head>
-  <body>
-    <header>
-      <div class="name">
-        <h1>Konstantin Meshavkin</h1>
-      </div>
-      <div class="contactsWrapper">
+    .list>div+div {
+      padding-top: 4px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="name">
+      <h1>Konstantin Meshavkin</h1>
+    </div>
+    <div class="contactsWrapper">
+      <div>
+        <div class="fa fa-envelope"></div>
         <div>
-          <div class="fa fa-envelope"></div>
-          <div>
-            <a href="mailto:meshavkin1996@gmail.com" target="_blank"
-              >meshavkin1996@gmail.com</a
-            >
-          </div>
+          <a href="mailto:meshavkin1996@gmail.com" target="_blank">meshavkin1996@gmail.com</a>
+        </div>
+      </div>
+      <div>
+        <div class="fa fa-github"></div>
+        <div>
+          <a href="https://github.com/kmeshavkin" target="_blank">github.com/kmeshavkin</a>
+        </div>
+      </div>
+      <div>
+        <div class="fa fa-suitcase"></div>
+        <div>
+          <a href="https://kmeshavkin.github.io/" target="_blank">kmeshavkin.github.io</a>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main>
+    <h1>Experience</h1>
+    <div class="list">
+      <h2>Kaspersky Lab</h2>
+      <div class="position">
+        <h3>Front-end Developer</h3>
+        <div class="date">Mar. 2018 – Now</div>
+      </div>
+      <p>
+        Started as an internship and turned into a full time position.
+      </p>
+      <p>Participated in two projects:</p>
+      <div class="workProjects">
+        <div>
+          <h3>React-based content editor &ndash; current project</h3>
+          <p>
+            This content editor is used for static page creation which is used
+            for kaspersky.com website development
+          </p>
+          <ul>
+            <li>
+              Supported legacy code written in Javascript (documentation, refactoring, testing), completed various tasks
+              on new components creation, UI improvements, data search and filtering, etc.
+            </li>
+            <li>
+              Later helped to build this content editor from ground-up, now
+              using Typescript. Created various critical components like
+              inbound and outbound data validation using JSON Schema and data migration tool
+            </li>
+          </ul>
         </div>
         <div>
-          <div class="fa fa-github"></div>
-          <div>
-            <a href="https://github.com/kmeshavkin" target="_blank"
-              >github.com/kmeshavkin</a
-            >
-          </div>
-        </div>
-        <div>
-          <div class="fa fa-suitcase"></div>
-          <div>
-            <a href="https://kmeshavkin.github.io/" target="_blank"
-              >kmeshavkin.github.io</a
-            >
-          </div>
-        </div>
-      </div>
-    </header>
-    <main>
-      <h1>Experience</h1>
-      <div class="list">
-        <h2>Kaspersky Lab</h2>
-        <div class="position">
-          <h3>Front-end Developer</h3>
-          <div class="date">Mar. 2018 – Now</div>
-        </div>
-        <p>
-          Started as an internship and turned into a full time position.
-        </p>
-        <p>Participated in two projects:</p>
-        <div class="workProjects">
-          <div>
-            <h3>React-based content editor &ndash; current project</h3>
-            <p>
-              This content editor is used for static page creation which is used
-              for kaspersky.com website development
-            </p>
-            <ul>
-              <li>
-                Supported legacy code written in Javascript, created some
-                features like search and filter in a big component list.
-              </li>
-              <li>
-                Helped to document (JSDoc) and refactor old code to a newer
-                standards
-              </li>
-              <li>
-                Later helped to build this content editor from ground-up, now
-                using Typescript. Created various critical components like
-                inbound and outbound data validation using JSON Schema
-              </li>
-            </ul>
-          </div>
-          <div>
-            <h3>Partner Portal</h3>
-            <p>Development and support of partners.kaspersky.com website</p>
-            <ul>
-              <li>
-                Supported legacy code for old Partner Portal before migration
-                and developed e2e regression testing system for Portal using
-                Jest and Puppeteer with email notifications
-              </li>
-              <li>
-                Participated in old portal migration on a new platform
-                (partners.kaspersky.com) under time pressure – complete website
-                for one region was built under 3 months
-              </li>
-              <li>
-                Automated different tasks of the workflow which helped team with
-                monotonous tasks, playing critical role in fast portal migration
-              </li>
-              <li>
-                Created various components for portal with advanced business
-                logic using HTML, JavaScript and CSS which are displayed on the
-                main page and used on day-to-day basis
-              </li>
-            </ul>
-          </div>
+          <h3>Partner Portal</h3>
+          <p>Development and support of partners.kaspersky.com website</p>
+          <ul>
+            <li>
+              Supported legacy code for old Partner Portal before migration
+              and developed e2e regression testing system for Portal using
+              Jest and Puppeteer with email notifications
+            </li>
+            <li>
+              Participated in old portal migration on a new platform
+              (partners.kaspersky.com) under time pressure – complete website
+              for one region was built under 3 months
+            </li>
+            <li>
+              Automated different tasks of the workflow which helped team with
+              monotonous tasks, playing critical role in fast portal migration
+            </li>
+            <li>
+              Created various components for portal with advanced business
+              logic using HTML, JavaScript and CSS which are used on day-to-day basis by customers
+            </li>
+          </ul>
         </div>
       </div>
-      <div class="skillsProjects">
-        <div class="projects">
-          <h1>Projects</h1>
-          <div class="list">
-            <div class="project">
-              <h2>rxmask.js</h2>
-              <p>
-                Advanced input mask package published on npmjs. It can be both
-                embedded in HTML document and used as module. Very flexible,
-                also allows to use same characters that are present in mask and
-                to specify format for every character.
-              </p>
-              Visit
-              <a
-                href="https://kmeshavkin.github.io/rxmask-playground/"
-                target="_blank"
-                class=""
-              >
-                Playground</a
-              >,
-              <a href="https://github.com/kmeshavkin/rxmask" target="_blank">
-                Github
-              </a>
-              or
-              <a href="https://www.npmjs.com/package/rxmask" target="_blank">
-                npmjs
-              </a>
-              for more info.
-            </div>
-            <div class="project">
-              <h2>Weather Mood Radio</h2>
-              <p>
-                Made from scratch radio that picks Lo-Fi tracks from
-                <a href="https://soundcloud.com/" target="_blank">SoundCloud</a>
-                according to current weather, day time and season at your
-                location (based on current geolocation). Responsive design.
-                <br />
-              </p>
-              Visit
-              <a
-                href="https://kmeshavkin.github.io/weather-mood-radio/"
-                target="_blank"
-              >
-                Playground
-              </a>
-              or
-              <a
-                href="https://github.com/kmeshavkin/weather-mood-radio"
-                target="_blank"
-              >
-                Github
-              </a>
-              for more info.
-            </div>
-          </div>
-        </div>
-        <div class="skills">
-          <h1>Skills</h1>
-          <div class="list">
-            <div>
-              <h3>Main stack</h3>
-              <ul>
-                <li>Javascript (ES6+), Typescript</li>
-                <li>React, Redux</li>
-                <li>HTML5, CSS3, SASS</li>
-              </ul>
-            </div>
-            <div>
-              <h3>Testing</h3>
-              <ul>
-                <li>Jest</li>
-                <li>Cypress, Puppeteer</li>
-              </ul>
-            </div>
-            <div>
-              <h3>Other</h3>
-              <ul>
-                <li>Version Control (Git)</li>
-                <li>Agile/Scrum</li>
-                <li>Confluence, TFS, Jira</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-      <h1>Education</h1>
-      <div class="education">
+    </div>
+    <div class="skillsProjects">
+      <div class="projects">
+        <h1>Projects</h1>
         <div class="list">
-          <h3>
-            Bachelor's degree in Information Security
-          </h3>
-          <h3>Moscow Aviation Institute</h3>
-          <div class="date">Sep. 2014 – Jun. 2018</div>
+          <div class="project">
+            <h2>rxmask.js</h2>
+            <p>
+              Advanced input mask package published on npmjs. It can be both
+              embedded in HTML document and used as module. Very flexible,
+              also allows to use same characters that are present in mask and
+              to specify format for every character.
+            </p>
+            Visit
+            <a href="https://kmeshavkin.github.io/rxmask-playground/" target="_blank" class="">
+              Playground</a>,
+            <a href="https://github.com/kmeshavkin/rxmask" target="_blank">
+              Github
+            </a>
+            or
+            <a href="https://www.npmjs.com/package/rxmask" target="_blank">
+              npmjs
+            </a>
+            for more info.
+          </div>
+          <div class="project">
+            <h2>Weather Mood Radio</h2>
+            <p>
+              Made from scratch radio that picks Lo-Fi tracks from
+              <a href="https://soundcloud.com/" target="_blank">SoundCloud</a>
+              according to current weather, day time and season at your
+              location (based on current geolocation). Responsive design.
+              <br />
+            </p>
+            Visit
+            <a href="https://kmeshavkin.github.io/weather-mood-radio/" target="_blank">
+              Playground
+            </a>
+            or
+            <a href="https://github.com/kmeshavkin/weather-mood-radio" target="_blank">
+              Github
+            </a>
+            for more info.
+          </div>
         </div>
       </div>
-    </main>
-  </body>
+      <div class="skills">
+        <h1>Skills</h1>
+        <div class="list">
+          <div>
+            <h3>Main stack</h3>
+            <ul>
+              <li>Javascript (ES6+), Typescript</li>
+              <li>React, Redux</li>
+              <li>HTML5, CSS3, SASS</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Testing</h3>
+            <ul>
+              <li>Jest</li>
+              <li>Cypress, Puppeteer</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Other</h3>
+            <ul>
+              <li>Version Control (Git)</li>
+              <li>Agile/Scrum</li>
+              <li>Confluence, TFS, Jira</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <h1>Education</h1>
+    <div class="education">
+      <div class="list">
+        <h3>
+          Bachelor's degree in Information Security
+        </h3>
+        <h3>Moscow Aviation Institute</h3>
+        <div class="date">Sep. 2014 – Jun. 2018</div>
+      </div>
+    </div>
+  </main>
+</body>
+
 </html>

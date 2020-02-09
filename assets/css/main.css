@@ -1306,6 +1306,15 @@ div.icons {
       justify-content: space-around;
 }
 
+div.icons + div.icons {
+  margin-top: 2em;
+}
+
+div.icons > div {
+  padding: 0 0.5em;
+  white-space: nowrap;
+}
+
 div.icons > div:before {
   font-size: 0.8em;
   background: #878787;
@@ -1746,6 +1755,9 @@ span.box {
         -ms-flex-align: center;
             align-items: center;
     margin-bottom: 0;
+  }
+  #footer div.icons + div.icons {
+    margin-top: 0.5em;
   }
   #footer div.icons > div + div {
     margin-top: 0.5em;

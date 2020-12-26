@@ -1,0 +1,64 @@
+@media screen and (max-width: 200px) {
+  html {
+    word-break: break-all;
+  }
+}
+
+@media screen and (max-width: 736px) {
+  // Generic
+
+  h1 {
+    font-size: 8vw !important;
+  }
+
+  // Main
+
+  header,
+  footer {
+    word-break: break-all;
+  }
+
+  header,
+  main {
+    width: calc(100% - 2rem) !important;
+  }
+
+  main > .container {
+    flex-direction: column;
+
+    section + section {
+      padding-left: 0 !important;
+    }
+
+    div.actions {
+      width: 100%;
+
+      .button + .button {
+        margin-left: 0 !important;
+      }
+    }
+  }
+
+  footer {
+    > .container {
+      flex-direction: column;
+
+      > div.icon {
+        width: fit-content;
+        margin: auto;
+      }
+
+      > div.icon + div.icon {
+        margin-top: $padding-small;
+      }
+    }
+  }
+
+  // Components
+
+  a.button {
+    width: 100%;
+    display: block;
+    padding: 1em 0 1em 0;
+  }
+}

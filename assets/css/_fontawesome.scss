@@ -1,0 +1,40 @@
+.icon {
+  &:before {
+    display: inline-block;
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 400;
+  }
+
+  &.solid {
+    &:before {
+      font-weight: 900;
+    }
+  }
+
+  &.brands {
+    &:before {
+      font-family: 'Font Awesome 5 Brands';
+    }
+  }
+}
+
+.button.icon {
+  &:before {
+    padding-right: 0.75em;
+    opacity: 0.5;
+  }
+}
+
+footer .icon {
+  &:before {
+    font-size: 0.8em;
+    background: #878787;
+    color: #e4e4e4;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 2rem;
+    text-align: center;
+    box-shadow: 0.125rem 0.175rem 0 0 rgba(0, 0, 0, 0.125);
+    margin-right: 0.5rem;
+  }
+}

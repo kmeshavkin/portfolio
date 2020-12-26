@@ -1,9 +1,9 @@
-@import "libs/mixins";
-@import "libs/vendor";
-@import "libs/breakpoints";
-@import "libs/html-grid";
-@import url("fontawesome-all.min.css");
-@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600|Arvo:700");
+@import 'libs/mixins';
+@import 'libs/vendor';
+@import 'libs/breakpoints';
+@import 'libs/html-grid';
+@import url('fontawesome-all.min.css');
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600|Arvo:700');
 
 /*
 	Template by HTML5 UP
@@ -16,20 +16,20 @@
   (
     xlarge: (
       1281px,
-      1680px
+      1680px,
     ),
     large: (
       981px,
-      1280px
+      1280px,
     ),
     medium: (
       737px,
-      980px
+      980px,
     ),
     small: (
       null,
-      736px
-    )
+      736px,
+    ),
   )
 );
 
@@ -77,7 +77,7 @@ body {
 }
 
 body {
-  font-family: "Source Sans Pro";
+  font-family: 'Source Sans Pro';
   font-weight: 300;
   color: #777;
   line-height: 1.65em;
@@ -119,8 +119,8 @@ h3 {
 
 a {
   @include vendor(
-    "transition",
-    ("color 0.25s ease-in-out", "border-bottom-color 0.25s ease-in-out")
+    'transition',
+    ('color 0.25s ease-in-out', 'border-bottom-color 0.25s ease-in-out')
   );
   color: #666;
   text-decoration: none;
@@ -128,8 +128,8 @@ a {
 
   strong {
     @include vendor(
-      "transition",
-      ("color 0.25s ease-in-out", "border-bottom-color 0.25s ease-in-out")
+      'transition',
+      ('color 0.25s ease-in-out', 'border-bottom-color 0.25s ease-in-out')
     );
   }
 
@@ -170,19 +170,19 @@ ul {
   max-width: 100%;
   width: 70em;
 
-  @include breakpoint("<=xlarge") {
+  @include breakpoint('<=xlarge') {
     width: 68em;
   }
 
-  @include breakpoint("<=large") {
+  @include breakpoint('<=large') {
     width: calc(100% - 80px);
   }
 
-  @include breakpoint("<=medium") {
+  @include breakpoint('<=medium') {
     width: calc(100% - 100px);
   }
 
-  @include breakpoint("<=small") {
+  @include breakpoint('<=small') {
     width: calc(100% - 40px);
   }
 }
@@ -192,27 +192,27 @@ ul {
 .row {
   @include html-grid((50px, 50px));
 
-  @include breakpoint("<=xlarge") {
-    @include html-grid((50px, 50px), "xlarge");
+  @include breakpoint('<=xlarge') {
+    @include html-grid((50px, 50px), 'xlarge');
   }
 
-  @include breakpoint("<=large") {
-    @include html-grid((40px, 40px), "large");
+  @include breakpoint('<=large') {
+    @include html-grid((40px, 40px), 'large');
   }
 
-  @include breakpoint("<=medium") {
-    @include html-grid((50px, 50px), "medium");
+  @include breakpoint('<=medium') {
+    @include html-grid((50px, 50px), 'medium');
   }
 
-  @include breakpoint("<=small") {
-    @include html-grid((30px, 30px), "small");
+  @include breakpoint('<=small') {
+    @include html-grid((30px, 30px), 'small');
   }
 }
 
 /* Image */
 
 .image {
-  @include vendor("transition", "border 0.25s ease-in-out");
+  @include vendor('transition', 'border 0.25s ease-in-out');
   display: inline-block;
   border: solid 6px #ebebeba1 !important;
 
@@ -302,12 +302,12 @@ div.actions {
 
 /* Button */
 
-input[type="button"],
-input[type="submit"],
-input[type="reset"],
+input[type='button'],
+input[type='submit'],
+input[type='reset'],
 button,
 .button {
-  @include vendor("transition", "all 0.25s ease-in-out");
+  @include vendor('transition', 'all 0.25s ease-in-out');
   -webkit-appearance: none;
   position: relative;
   display: flex;
@@ -402,7 +402,7 @@ span.box {
 
   &.brands {
     &:before {
-      font-family: "Font Awesome 5 Brands";
+      font-family: 'Font Awesome 5 Brands';
     }
   }
 }
@@ -430,7 +430,7 @@ span.box {
   }
 
   h1 {
-    font-family: "Arvo";
+    font-family: 'Arvo';
     font-weight: 700;
     color: #ed786a;
     text-shadow: 0.05em 0.075em 0 rgba(0, 0, 0, 0.1);
@@ -517,7 +517,7 @@ span.box {
 
 /* XLarge */
 
-@include breakpoint("<=xlarge") {
+@include breakpoint('<=xlarge') {
   /* Basic */
 
   body,
@@ -530,7 +530,7 @@ span.box {
 
 /* Large */
 
-@include breakpoint("<=large") {
+@include breakpoint('<=large') {
   /* Basic */
 
   body,
@@ -596,7 +596,7 @@ span.box {
 
 /* Medium */
 
-@include breakpoint("<=medium") {
+@include breakpoint('<=medium') {
   /* Basic */
 
   html,
@@ -614,7 +614,7 @@ span.box {
 
   /* Small */
 
-  @include breakpoint("<=small") {
+  @include breakpoint('<=small') {
     /* Basic */
 
     body,
@@ -657,9 +657,9 @@ span.box {
 
     /* Button */
 
-    input[type="button"],
-    input[type="submit"],
-    input[type="reset"],
+    input[type='button'],
+    input[type='submit'],
+    input[type='reset'],
     button,
     .button {
       letter-spacing: 2px;

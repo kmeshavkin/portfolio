@@ -57,7 +57,7 @@ main {
     > section {
       max-width: $max-section-width;
       flex: 1 0 0;
-      padding: $padding-small 0;
+      padding: $padding-medium 0;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -72,10 +72,17 @@ main {
         }
       }
 
-      > .boxWrapper {
+      .boxesWrapper {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+      }
+
+      .boxWrapper {
         text-align: center;
         margin-bottom: 1.5em;
-        > p {
+        max-width: 500px;
+        p {
           margin: 0.5em 0 0.25em 0;
         }
       }
@@ -88,6 +95,12 @@ main {
 
     > section + section {
       padding-left: $padding-medium;
+    }
+
+    > section.wide {
+      padding-left: 0;
+      flex: 100%;
+      max-width: 100%;
     }
   }
 
@@ -128,7 +141,3 @@ footer {
     margin-top: $padding-small;
   }
 }
-
-/* TODO:
-- Make fonts sizes after media smaller?
-*/

@@ -30,6 +30,10 @@
       padding-left: 0 !important;
     }
 
+    section .boxesWrapper {
+      flex-direction: column;
+    }
+
     div.actions {
       width: 100%;
 

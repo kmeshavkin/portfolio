@@ -32,6 +32,10 @@
 
     section .boxesWrapper {
       flex-direction: column;
+
+      .boxWrapper {
+        padding: 0 !important;
+      }
     }
 
     div.actions {

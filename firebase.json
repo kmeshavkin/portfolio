@@ -1,0 +1,7 @@
+{
+  "hosting": {
+    "site": "kmesh-portfolio",
+    "public": ".",
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"]
+  }
+}

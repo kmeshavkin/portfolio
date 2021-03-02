@@ -1,0 +1,20 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "My portfolio",
+  "main": "index.js",
+  "scripts": {
+    "html-pdf": "html-pdf resume.html resume.pdf",
+    "deploy": "firebase deploy --only hosting:kmesh-portfolio"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kmeshavkin/kmeshavkin.github.io.git"
+  },
+  "author": "Meshavkin Konstantin <meshavkin1996@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kmeshavkin/kmeshavkin.github.io/issues"
+  },
+  "homepage": "https://github.com/kmeshavkin/kmeshavkin.github.io#readme"
+}

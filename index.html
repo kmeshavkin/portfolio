@@ -220,7 +220,8 @@
     <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-analytics.js"></script>
     <script>
-      var firebaseConfig = {
+      try {
+        var firebaseConfig = {
         apiKey: "AIzaSyDoWdb3fwko-yNTkpEfvkUHzzTQaPVBwHs",
         authDomain: "shortify-286600.firebaseapp.com",
         projectId: "shortify-286600",
@@ -231,6 +232,9 @@
       };
       firebase.initializeApp(firebaseConfig);
       firebase.analytics();
+      } catch (e) {
+        console.warn('Failed to load Firebase analytics');
+      }
     </script>
   </body>
 </html>

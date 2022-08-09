@@ -7,12 +7,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Portfolio | Konstantin Meshavkin | front-end developer</title>
+    <title>Portfolio | Konstantin Meshavkin | Software Engineer</title>
     <link
       href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,800,900|Arvo:700"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
+    <link
+      rel="stylesheet"
+      href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css"
+    />
     <style>
       /* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.23, autoprefixer: v9.7.3) */
 
@@ -26,7 +29,7 @@
         height: 28.9cm;
         margin: 0px;
 
-        font-family: 'Source Sans Pro';
+        font-family: "Source Sans Pro";
         background-color: white;
       }
 
@@ -47,7 +50,7 @@
       }
 
       header,
-      .projectsEducationSkills {
+      .projectsSkills {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
@@ -68,6 +71,7 @@
       /* HEADER */
 
       header {
+        height: 80px;
         background-color: gainsboro;
         -webkit-box-align: center;
         -ms-flex-align: center;
@@ -75,7 +79,7 @@
       }
 
       header h1 {
-        padding: 0 24px;
+        padding: 0 16px;
       }
 
       .contactsWrapper {
@@ -85,17 +89,17 @@
         -webkit-box-flex: 1;
         -ms-flex: 1;
         flex: 1;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-        flex-direction: column;
         -webkit-box-align: end;
         -ms-flex-align: end;
         align-items: flex-end;
-        padding: 8px 24px;
+        padding: 8px 16px;
       }
 
-      .contactsWrapper > div {
+      .contactsColumn + .contactsColumn {
+        padding-left: 16px;
+      }
+
+      .contactsColumn > div {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
@@ -104,12 +108,12 @@
         align-items: center;
       }
 
-      .contactsWrapper > div + div {
+      .contactsColumn > div + div {
         padding-top: 6px;
       }
 
-      .contactsWrapper > div > .fa,
-      .contactsWrapper > div > .fab {
+      .contactsColumn > div > .fa,
+      .contactsColumn > div > .fab {
         padding-right: 6px;
       }
 
@@ -127,6 +131,11 @@
         margin-left: 8px;
         padding-left: 16px;
         border-left: 3px grey solid;
+      }
+
+      .experience {
+        margin-bottom: 12px;
+        margin-right: 24px;
       }
 
       /* EXPERIENCE */
@@ -151,7 +160,7 @@
 
       /* PROJECTS, EDUCATION, SKILLS */
 
-      .projectsEducation {
+      .projects {
         width: 65%;
         padding-right: 24px;
       }
@@ -186,81 +195,113 @@
         <h1>Konstantin Meshavkin</h1>
       </div>
       <div class="contactsWrapper">
-        <div>
-          <div class="fa fa-envelope"></div>
+        <div class="contactsColumn">
           <div>
-            <a href="mailto:meshavkin1996@gmail.com" target="_blank">meshavkin1996@gmail.com</a>
+            <div class="fa fa-envelope"></div>
+            <div>
+              <a href="mailto:meshavkin1996@gmail.com" target="_blank"
+                >meshavkin1996@gmail.com</a
+              >
+            </div>
+          </div>
+          <div>
+            <div class="fa fa-linkedin"></div>
+            <div>
+              <a href="https://www.linkedin.com/in/kmeshavkin/" target="_blank"
+                >linkedin.com/in/kmeshavkin</a
+              >
+            </div>
           </div>
         </div>
-        <div>
-          <div class="fa fa-linkedin"></div>
+        <div class="contactsColumn">
           <div>
-            <a href="https://www.linkedin.com/in/kmeshavkin/" target="_blank">linkedin.com/in/kmeshavkin</a>
+            <div class="fa fa-github"></div>
+            <div>
+              <a href="https://github.com/kmeshavkin" target="_blank"
+                >github.com/kmeshavkin</a
+              >
+            </div>
           </div>
-        </div>
-        <div>
-          <div class="fa fa-github"></div>
           <div>
-            <a href="https://github.com/kmeshavkin" target="_blank">github.com/kmeshavkin</a>
-          </div>
-        </div>
-        <div>
-          <div class="fa fa-suitcase"></div>
-          <div>
-            <a href="https://portfolio.kmesh.dev/" target="_blank">portfolio.kmesh.dev</a>
+            <div class="fa fa-suitcase"></div>
+            <div>
+              <a href="https://portfolio.kmesh.dev/" target="_blank"
+                >portfolio.kmesh.dev</a
+              >
+            </div>
           </div>
         </div>
       </div>
     </header>
     <main>
       <h1>Experience</h1>
-      <div class="list">
+      <div class="experience list">
+        <h2>Bolt</h2>
+        <div class="position">
+          <h3>Software Engineer</h3>
+          <div class="date">Aug. 2022 - Now</div>
+        </div>
+        <p>Support and development of Bolt Fleet Portal.</p>
+      </div>
+      <div class="experience list">
         <h2>Tinkoff Bank</h2>
         <div class="position">
-          <h3>Software Developer</h3>
+          <h3>Software Engineer</h3>
           <div class="date">Mar. 2021 - Apr. 2022</div>
         </div>
         <p>
-          Working in team creating small 2-4 months long projects (<a href="https://project.tinkoff.ru/" target="_blank"
+          Working in team creating small 2-4 months long projects (<a
+            href="https://project.tinkoff.ru/"
+            target="_blank"
             >project.tinkoff.ru</a
-          >). Responsible for documentation, frontend, backend, deployment of several projects, internal packages and
-          templates.
+          >). Responsible for documentation, frontend, backend, deployment of
+          several projects, internal packages and templates.
         </p>
         <p>
-          Some of the projects include
-          <a href="https://kruzhok.project.tinkoff.ru/" target="_blank">kruzhok.project.tinkoff.ru</a> (backend,
-          frontend for admins),
-        </p>
-        <p>
-          <a href="https://loud-fans.project.tinkoff.ru/" target="_blank">loud-fans.project.tinkoff.ru</a> (backend),
-          <a href="https://hungrymiles.project.tinkoff.ru/" target="_blank">hungrymiles.project.tinkoff.ru</a> (backend,
-          deployment),
-        </p>
-        <p>
-          <a href="https://grants.project.tinkoff.ru/" target="_blank">grants.project.tinkoff.ru</a> (frontend for
-          admins).
+          Some of the projects:
+          <a href="https://kruzhok.project.tinkoff.ru/" target="_blank"
+            >kruzhok.project.tinkoff.ru</a
+          >,
+          <a href="https://grants.project.tinkoff.ru/" target="_blank"
+            >grants.project.tinkoff.ru</a
+          >,
+          <a href="https://loud-fans.project.tinkoff.ru/" target="_blank"
+            >loud-fans.project.tinkoff.ru</a
+          >,
+          <a href="https://hungrymiles.project.tinkoff.ru/" target="_blank"
+            >hungrymiles.project.tinkoff.ru</a
+          >
+          (frontend, frontend for admins, backend, deployment).
         </p>
       </div>
-      <br />
-      <div class="list">
+      <div class="experience list">
         <h2>Kaspersky Lab</h2>
         <div class="position">
-          <h3>Software Developer</h3>
+          <h3>Software Engineer</h3>
           <div class="date">Mar. 2018 – Mar. 2021</div>
         </div>
-        <p>Started as an internship and turned into a full time position. Participated in two projects:</p>
+        <p>
+          Started as an internship and turned into a full time position.
+          Participated in two projects:
+        </p>
         <div class="workProjects">
           <div>
             <h3>React-based content editor</h3>
             <p>
-              This content editor is used for content creation which is deployed on
-              <a href="https://kaspersky.com/" target="_blank">kaspersky.com</a> website.
+              This content editor is used for content creation which is deployed
+              on
+              <a href="https://kaspersky.com/" target="_blank">kaspersky.com</a>
+              website.
             </p>
             <ul>
-              <li>Documentation, refactoring, testing components creation, UI, data handling of legacy code.</li>
               <li>
-                Participated in rewrite of project - created various critical components like inbound and outbound data
-                validation using JSON Schema and data migration tool.
+                Documentation, refactoring, testing components creation, UI,
+                data handling of legacy code.
+              </li>
+              <li>
+                Participated in rewrite of project - created various critical
+                components like inbound and outbound data validation using JSON
+                Schema and data migration tool.
               </li>
             </ul>
           </div>
@@ -268,86 +309,96 @@
             <h3>Partner Portal</h3>
             <p>
               Development and support of
-              <a href="https://partners.kaspersky.com/" target="_blank">partners.kaspersky.com</a> website.
+              <a href="https://partners.kaspersky.com/" target="_blank"
+                >partners.kaspersky.com</a
+              >
+              website.
             </p>
             <ul>
               <li>
-                Supported legacy code and took part in migration to a new platform - MVP was built under 3 months.
+                Supported legacy code, took part in migration to a new platform
+                - MVP was built under 3 months.
               </li>
               <li>
-                Created various components for portal with advanced business logic using HTML, JavaScript and CSS which
-                are used on day-to-day basis by customers.
+                Created various components for portal with advanced business
+                logic using HTML, JavaScript and CSS which are used on
+                day-to-day basis by customers.
               </li>
             </ul>
           </div>
         </div>
       </div>
-      <div class="projectsEducationSkills">
-        <div class="projectsEducation">
+      <div class="projectsSkills">
+        <div class="projects">
           <h1>Projects</h1>
           <div class="list">
             <div class="project">
               <h2>
                 shortify
                 <span style="font-weight: normal; font-size: 16px"
-                  >(<a href="https://sh.kmesh.dev/" target="_blank" class="">Website</a>,
-                  <a href="https://github.com/kmeshavkin/shortify" target="_blank"> Github</a>)</span
+                  >(<a href="https://sh.kmesh.dev/" target="_blank" class=""
+                    >Website</a
+                  >,
+                  <a
+                    href="https://github.com/kmeshavkin/shortify"
+                    target="_blank"
+                  >
+                    Github</a
+                  >)</span
                 >
               </h2>
               <p>
-                Fullstack (Express/React) link shortener app deployed on Google Cloud. Server-side session management,
-                MongoDB as database, Email/password or Google OAuth 2.0 authentication.
+                Fullstack (Express/React) link shortener app deployed on Google
+                Cloud. Server-side session management, MongoDB as database,
+                Email/password or Google OAuth 2.0 authentication.
               </p>
             </div>
             <div class="project">
               <h2>
                 rxmask.js
                 <span style="font-weight: normal; font-size: 16px"
-                  >(<a href="https://rxmask.kmesh.dev/" target="_blank" class="">Playground</a>,
-                  <a href="https://github.com/kmeshavkin/rxmask" target="_blank">Github</a>,
-                  <a href="https://www.npmjs.com/package/rxmask" target="_blank"> npmjs</a>)
+                  >(<a href="https://rxmask.kmesh.dev/" target="_blank" class=""
+                    >Playground</a
+                  >,
+                  <a href="https://github.com/kmeshavkin/rxmask" target="_blank"
+                    >Github</a
+                  >,
+                  <a
+                    href="https://www.npmjs.com/package/rxmask"
+                    target="_blank"
+                  >
+                    npmjs</a
+                  >)
                 </span>
               </h2>
               <p>
-                Advanced input mask package published on npmjs. HTML embeddable. Allows to specify format for every
-                character.
+                Advanced input mask package published on npmjs. HTML embeddable.
+                Allows to specify format for every character.
               </p>
             </div>
             <div class="project">
               <h2>
                 Weather Mood Radio
                 <span style="font-weight: normal; font-size: 16px"
-                  >(<a href="https://weather-mood-radio.kmesh.dev/" target="_blank">Playground</a>,
-                  <a href="https://github.com/kmeshavkin/weather-mood-radio" target="_blank"> Github</a>)</span
+                  >(<a
+                    href="https://weather-mood-radio.kmesh.dev/"
+                    target="_blank"
+                    >Playground</a
+                  >,
+                  <a
+                    href="https://github.com/kmeshavkin/weather-mood-radio"
+                    target="_blank"
+                  >
+                    Github</a
+                  >)</span
                 >
               </h2>
               <p>
                 Radio that picks Lo-Fi tracks from
                 <a href="https://soundcloud.com/" target="_blank">SoundCloud</a>
-                according to current weather, day time and season at your geolocation.
-                <br />
+                according to current weather, day time and season at your
+                geolocation.
               </p>
-            </div>
-          </div>
-          <h1>Education</h1>
-          <div class="education">
-            <div class="list">
-              <h3>Bachelor's degree in</h3>
-              <h3>Information Systems</h3>
-              <h3>Security</h3>
-              <div class="date">
-                <b><i>MAI</i></b
-                >, Sep. 2014 – Jun. 2018
-              </div>
-            </div>
-            <div class="list">
-              <h3>Master's degree in</h3>
-              <h3>Information Systems</h3>
-              <h3>Security</h3>
-              <div class="date">
-                <b><i>MAI</i></b
-                >, Sep. 2018 – Jun. 2020
-              </div>
             </div>
           </div>
         </div>
@@ -356,16 +407,14 @@
           <div class="list">
             <div>
               <ul>
-                <li>Typescript</li>
-                <li>Javascript (ES6+)</li>
+                <li>Typescript, Javascript</li>
               </ul>
               <h3>Backend</h3>
               <ul>
                 <li>Node.js</li>
                 <li>NestJS, Express</li>
                 <li>PostgreSQL</li>
-                <li>TypeORM</li>
-                <li>Passport.js</li>
+                <li>Docker</li>
               </ul>
               <h3>Frontend</h3>
               <ul>
@@ -380,15 +429,25 @@
                 <li>Cypress, Puppeteer</li>
               </ul>
             </div>
-            <div>
-              <h3>Other</h3>
-              <ul>
-                <li>Docker</li>
-                <li>Version Control (Git)</li>
-                <li>Agile (Scrum, Kanban)</li>
-                <li>Confluence, TFS, Jira</li>
-              </ul>
-            </div>
+          </div>
+        </div>
+      </div>
+      <h1>Education</h1>
+      <div class="education">
+        <div class="list">
+          <h3>Bachelor's degree in</h3>
+          <h3>Information Systems Security</h3>
+          <div class="date">
+            <b><i>MAI</i></b
+            >, Sep. 2014 – Jun. 2018
+          </div>
+        </div>
+        <div class="list">
+          <h3>Master's degree in</h3>
+          <h3>Information Systems Security</h3>
+          <div class="date">
+            <b><i>MAI</i></b
+            >, Sep. 2018 – Jun. 2020
           </div>
         </div>
       </div>
